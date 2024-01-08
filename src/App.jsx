@@ -17,7 +17,6 @@ function App() {
    
     <BrowserRouter>                 
           <Routes>
-            <Route path="/" exact element={<Minute1 />} />
             <Route path="/" exact element={<HomePage />} />
             <Route path="/home" exact element={<HomePage />} />
             <Route path="/login" exact element={<LoginPage />} />
