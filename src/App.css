@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
+    background-color: #1d2634;
+    color: #c3cf1a;
+    font-family: 'Montserrat', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*header */
+/*.header{
+    width: auto;
+    height: 50px;
+    background-color: brown;
+    display: flex;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header >h3{
+    margin-left: 10px;
 }
+/*container */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container-buttons{
+    display: flex;
+    flex-direction: row; 
+    height: 60px;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
-
-.App-link {
-  color: #61dafb;
+.circular1{
+    background-color: red;
+    color: white;
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
 }
+.circular1:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+ @media only screen and (max-width: 767px) {
+    .circular1{
+        background-color: red;
+        color: white;
+        margin: 10px;
+        width: 45px;
+        height: 35px;
+        border-radius: 50%;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+        transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+    }
+}
+.circular2{
+    background-color: green;
+    color: white;
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+.circular2:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+@media only screen and (max-width: 767px) {
+    .circular2{
+     background-color: green;
+    color: white;
+    margin: 10px;
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+    }
+}
+.greenbutton{
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    width: 69px;
+    height: 37px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
+.greenbutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.Violetbutton{
+    background-color:violet;
+    color: white;
+    font-size: 15px;
+    width: 69px;
+    height: 37px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
+.Violetbutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.redbutton{
+    background-color:red;
+    color: white;
+    font-size: 15px;
+    width: 69px;
+    height: 37px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
+.redbutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.Orangebutton{
+    background-color:orange;
+    color: white;
+    font-size: 15px;
+    width: 69px;
+    height: 37px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
+.Orangebutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.Yellowbutton{
+    background-color:yellow;
+    color: white;
+    font-size: 15px;
+    width: 69px;
+    height: 37px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
+.Yellowbutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.Bigbutton{
+    background-color:blue;
+    color: white;
+    font-size: 15px;
+    width: 79px;
+    height: 47px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.Bigbutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.Smallbutton{
+    background-color:rgb(165, 53, 175);
+    color: white;
+    font-size: 15px;
+    width: 69px;
+    height: 37px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(160, 226, 5, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
+.Smallbutton:hover{
+    box-shadow: 0 8px 16px rgba(160, 226, 5, 0.5);
+}
+.timer-container{
+    background-color: #c3cf1a;
+    color: white;
+   
+    width: 69px;
+    height: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
 }
