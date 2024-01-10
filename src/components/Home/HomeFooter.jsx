@@ -15,7 +15,7 @@ export default function HomeFooter({ onNavigationChange }) {
   };
   return (
     <Box sx={{
-        width: '100%',
+        width: '100vw',
         position: 'fixed',
         bottom: 0,
         right:0,

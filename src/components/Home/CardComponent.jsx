@@ -56,7 +56,15 @@ function CardComponent() {
     if(description==='1 Minute'){
       navigate('/minute1')
     }
-  
+    else if(description==='3 minute'){
+      navigate('/minute3')
+    }
+    else if(description==='5 minute'){
+      navigate('/minute5')
+    }
+     else if(description==='10 Minute'){
+      navigate('/minute10')
+    }
   }
   
     const [selectedFilter, setSelectedFilter] = useState('All');

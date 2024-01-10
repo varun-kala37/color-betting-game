@@ -50,17 +50,7 @@ function Profile() {
                     <BottomNavigationAction label="Transaction Record" icon={<ReceiptLongIcon />} />
                 </BottomNavigation>
             </Box>
-            <hr/>
-            <Button fullWidth sx={{color:'white'}} >Account Security</Button>
-            <hr/>
-            <Button fullWidth  sx={{color:'white'}}>Red Envelope</Button>
-            <hr/>
-            <Button fullWidth sx={{color:'white'}} >Designer Tutorial</Button>
-            <hr/>
-            <Button fullWidth  sx={{color:'white'}}>About</Button>
-            <hr/>
-            <Button fullWidth  sx={{color:'white'}}>Customer Service</Button>
-            <hr/>
+            
            <Box sx={{
                 display: 'flex',
                 alignItems: "center",

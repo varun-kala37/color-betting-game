@@ -18,7 +18,7 @@ export default function Header() {
     };
     const moveToHome=()=>{
         
-        navigate("/homepage");
+        navigate("/home");
     }
     return (
         <>
