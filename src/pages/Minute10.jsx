@@ -11,7 +11,7 @@ import BalanceContainer from '../components/BalanceContainer';
 
 function Minute10  () {
   
-const time=1;
+const [time,setTime]=useState(10);
   const [showDynamicComponent, setShowDynamicComponent] = useState(true);
   const handleClick = () => {
     setShowDynamicComponent(true);
@@ -28,13 +28,18 @@ const time=1;
     setShowDynamicComponent(false);
     setShowDynamicComponent2(false);
   };
+
+  const sendTimer=(data)=>{
+    setTime(data);
+    console.log("from parent timer")
+  }
   useEffect(() => {
     const data={duration:10}
     console.log("inside useeffect")
     /*
     const postDataAsync = async () => {
       try {
-        // Make an Axios POST request
+        // Make an Axios POST request for creating game
        
         const token= localStorage.getItem("accessToken");
         const headers = {
@@ -53,12 +58,35 @@ const time=1;
 */
   },[])
  
+  useEffect(() => {
+    const data={duration:time}
+    console.log("inside useeffect")
+    /*
+    const postDataAsync = async () => {
+      try {
+        // Make an Axios POST request for creating game within 1 minute game
+       
+        const token= localStorage.getItem("accessToken");
+        const headers = {
+          
+          Authorization: `Bearer ${token}`,
+        };
+        const response = await axios.post('http://localhost:5000/games/create-game', data, {headers});
+        // Update the state with the response data
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error making POST request:', error);
+      }
+    };
+    postDataAsync();
+   */
 
+  },[time])
   
   return (
     <>
      <Header /> 
-    <Counter />
+    <Counter sendTimer={sendTimer}/>
       <Container maxWidth="lg" style={{ width: '100%' }} sx={{mt:3,mb:'120px'}}>
         <Groupedbuttons minute={1}/>
         <Grid container >

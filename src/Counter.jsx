@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { Grid, Link, Box, Button, Container } from '@mui/material';
 import CountdownTimer from './components/CountdownTimer';
-function Counter() {
+function Counter({sendTimer}) {
 
 const [durationTimer,setDurationTimer]=useState(1);
 const [timerComplete, setTimerComplete] = useState(false);
@@ -9,6 +9,7 @@ const [timerComplete, setTimerComplete] = useState(false);
 const resultMinute=(minute)=>{
 console.log("minute:"+ minute)
 setDurationTimer(minute);
+sendTimer(minute);
 }
 
 useEffect(() => {  
