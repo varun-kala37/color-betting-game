@@ -53,6 +53,7 @@ const LoginPage = () => {
       const walletBalance=response.data.user.walletBalance;
       console.log("accessToken  !!!  ",token);
       console.log(" wallet balance !!!  ",walletBalance);
+      localStorage.setItem("userid",response.data.user.id)
       localStorage.setItem("accessToken", token);
       localStorage.setItem("WalletBalance", walletBalance);
       localStorage.setItem("tokenExpireTime", Date.now() + 1000 *60*60 *24);
@@ -60,7 +61,7 @@ const LoginPage = () => {
       console.log('token with local storage  <<<<   '+localStorage.getItem("accessToken"));
       console.log('time with local storage  <<<<   '+localStorage.getItem("tokenExpireTime"));
 
-      navigate("/homepage");
+      navigate("/home");
       console.log("Login successful:", response.data);
     } catch (error) {
       console.error("Error:", error);

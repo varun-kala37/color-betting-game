@@ -3,7 +3,7 @@ import { ButtonGroup, Button, Grid, Box, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import PreSaleRule from './PreSalesRule';
 import BettingHistory from './BalanceHistory/BettingHistory';
-import { Axios } from 'axios';
+import axios  from 'axios';
 const ModalComponent = ({ open, onClose, sendDataToParent, modalTitle }) => {
     const [modalValue, setModalValue] = useState('');
     const [isChecked, setChecked] = useState(true);
@@ -22,19 +22,19 @@ const ModalComponent = ({ open, onClose, sendDataToParent, modalTitle }) => {
     const handleSendData = () => {
 
         isChecked ? sendDataToParent(modalValue) : alert("Please click I Agree For Pre Sale Rule");
-/*
+
         const postDataAsync = async () => {
             try {
                 // Make an Axios POST request
+                const userid=localStorage.getItem("userid");
+                const gameid=localStorage.getItem("Gameid")
                 const data = {
-                    userId: "",
-                    gameId: "",
-                    number: "",
-                    color: "",
-                    size: "",
+                    userId: userid,
+                    gameId:gameid,
                     betAmount: Amount
 
                 }
+                
                   if (modalTitle == 0 || modalTitle == 1 || modalTitle == 2 || modalTitle == 3 || modalTitle == 4 || modalTitle == 5 ||
                     modalTitle == 6 || modalTitle == 7 || modalTitle == 8 || modalTitle == 9 )
                     {
@@ -49,7 +49,7 @@ const ModalComponent = ({ open, onClose, sendDataToParent, modalTitle }) => {
                             data.size=modalTitle;
                         }
     
-
+                   console.log(data)
 
                     const token = localStorage.getItem("accessToken");
                 const headers = {
@@ -61,10 +61,11 @@ const ModalComponent = ({ open, onClose, sendDataToParent, modalTitle }) => {
                 console.log(response.data);
             } catch (error) {
                 console.error('Error making POST request:', error);
+                console.log('Error details:', error.response);
             }
         };
         postDataAsync();
-*/
+
         onClose();
     };
     const handleCheckboxChange = () => {

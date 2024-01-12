@@ -9,7 +9,7 @@ const Bet = sequelize.define('Bet', {
     allowNull: true,
   },
   color: {
-    type: DataTypes.ENUM('red', 'green', 'blue', 'yellow'),
+    type: DataTypes.ENUM('red', 'green', 'blue', 'yellow','violet','orange'),
     allowNull: true,
   },
   size: {

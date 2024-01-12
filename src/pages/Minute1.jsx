@@ -49,6 +49,8 @@ const [time,setTime]=useState(1);
         const response = await axios.post('http://localhost:5000/games/create-game', data, {headers});
         // Update the state with the response data
         console.log(response.data);
+        localStorage.setItem("Gameid", response.data.id);
+        
       } catch (error) {
         console.error('Error making POST request:', error);
       }
@@ -61,7 +63,7 @@ const [time,setTime]=useState(1);
   useEffect(() => {
     const data={duration:time}
     console.log("inside useeffect")
-    /*
+    
     const postDataAsync = async () => {
       try {
         // Make an Axios POST request for creating game within 1 minute game
@@ -74,12 +76,13 @@ const [time,setTime]=useState(1);
         const response = await axios.post('http://localhost:5000/games/create-game', data, {headers});
         // Update the state with the response data
         console.log(response.data);
+        localStorage.setItem("Gameid", response.data.id);
       } catch (error) {
         console.error('Error making POST request:', error);
       }
     };
     postDataAsync();
-   */
+   
 
   },[time])
   
