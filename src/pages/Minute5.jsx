@@ -36,7 +36,7 @@ const [time,setTime]=useState(5);
   useEffect(() => {
     const data={duration:5}
     console.log("inside useeffect")
-    /*
+    
     const postDataAsync = async () => {
       try {
         // Make an Axios POST request for creating game
@@ -56,13 +56,13 @@ const [time,setTime]=useState(5);
     };
     postDataAsync();
    
-*/
+
   },[])
  
   useEffect(() => {
     const data={duration:time}
     console.log("inside useeffect")
-    /*
+    
     const postDataAsync = async () => {
       try {
         // Make an Axios POST request for creating game within 1 minute game
@@ -81,7 +81,7 @@ const [time,setTime]=useState(5);
       }
     };
     postDataAsync();
-   */
+   
 
   },[time])
   

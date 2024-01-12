@@ -27,11 +27,9 @@ function HomePage() {
           <Event/>
         );
       case 2:
-        return <Promotion />;
+        return <Walllet  />;
       case 3:
-        return <Walllet />;
-      case 4:
-        return <Profile />;
+        return <Profile/>;
       default:
         return null;
     }

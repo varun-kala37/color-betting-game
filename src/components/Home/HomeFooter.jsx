@@ -32,7 +32,6 @@ export default function HomeFooter({ onNavigationChange }) {
       >
         <BottomNavigationAction label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction label="Event" icon={<EmojiEventsIcon />} />
-        <BottomNavigationAction label="Promotion" icon={<LocalOfferIcon />} />
         <BottomNavigationAction label="Wallet" icon={<AccountBalanceWalletIcon />} />
         <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
       </BottomNavigation>
