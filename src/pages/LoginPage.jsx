@@ -38,7 +38,7 @@ const LoginPage = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventnoDefault();
 
     console.log('username  <<  '+localStorage.getItem("username"));
 

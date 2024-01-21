@@ -22,7 +22,7 @@ export default function Header() {
     }
     return (
         <>
-            <Container maxWidth="lg" style={{ width: '100%' }} 
+            <Container maxWidth="lg" style={{ width: '100vw' }} 
             sx={{position:'fixed',
             zIndex:1,
             bgcolor:'#3d3636',
